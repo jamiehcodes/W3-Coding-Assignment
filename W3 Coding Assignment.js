@@ -2,8 +2,8 @@
 //a.	Programmatically subtract the value of the first element in the array from the value in the last element of the array (do not use numbers to reference the last element, find it programmatically, ages[7] – ages[0] is not allowed). Print the result to the console.
 
 
-let ages = [3, 9, 23, 64, 2, 8, 28, 93];
-console.log(ages[ages.length - 1] - ages[0])
+let ages = [3, 9, 23, 64, 2, 8, 28, 93]; //creating array of numbers and assigning to a variable
+console.log(ages[ages.length - 1] - ages[0]) //subtracting the value of the first element (index 0) from the last one
 
 //b.	Add a new age to your array and repeat the step above to ensure it is dynamic (works for arrays of different lengths).
 console.log(ages[ages.length]=100)
@@ -11,29 +11,30 @@ console.log(ages)
 console.log(ages[ages.length - 1] - ages[0])
 
 //c.	Use a loop to iterate through the array and calculate the average age. Print the result to the console.
-let total = 0
-for (let i = 0; i < ages.length; i++) {
-    total = (total + ages[i])
+let total = 0 //my starting total so I can add the elements of the array
+for (let i = 0; i < ages.length; i++) {  //starting at 0 for index position on where to start, followed by the condition, and the increment
+    total = (total + ages[i])        //adds each number in the array to the total
 }
-console.log(total/ages.length)
+console.log(total/ages.length)      //takes the total and divides it by the number of elements in the array
 
 
 //2.	Create an array called names that contains the following values: ‘Sam’, ‘Tommy’, ‘Tim’, ‘Sally’, ‘Buck’, ‘Bob’.
 //a.	Use a loop to iterate through the array and calculate the average number of letters per name. Print the result to the console.
-let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob']
-let total2 = 0
-names.forEach((name) => {
-    const lettercount = name.length
-    total2 = total2 + lettercount 
+let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob']           //making array of names
+let total2 = 0                                                         // initial total
+names.forEach((name) => {                                           //for each name in the array
+    const lettercount = name.length                                 // length of each name
+    total2 = total2 + lettercount                                   // iterate through and add the lettercount of each name
 })
-var average = total2/names.length
+var average = total2/names.length                                  //take the total of the letters and divide by number of names for average
 console.log(average)
 //b.	Use a loop to iterate through the array again and concatenate all the names together, separated by spaces, and print the result to the console.
-var ListwComma = names.join(" ")
+var ListwComma = names.join(" ")                    //.join returns the array as a string; I'm putting a space as the separator; if not specified, the comma is the default
 console.log(ListwComma)
 
-//3.	How do you access the last element of any array?
-var lastElement = names[names.length -1]
+
+//3.	How do you access the last element of any array?     
+var lastElement = names[names.length -1]                   
 console.log (lastElement)
 
 // 4.	How do you access the first element of any array?
